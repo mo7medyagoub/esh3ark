@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إشعارك | إنشاء حساب جديد</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</head>
+<body class="font-alexandria bg-gray-50 text-gray-900 relative antialiased flex flex-col min-h-screen overflow-x-hidden">
+    <!-- Blurred Blobs Background -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        
+        
+    </div>
+
+    <!-- Navbar -->
+    <div data-include="/components/navbar.html"></div>
+
+    <main class="flex-grow flex flex-col items-center justify-center pt-32 pb-16">
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="sm:mx-auto sm:w-full sm:max-w-xl">
+        <img class="mx-auto h-16 w-auto" src="https://res.cloudinary.com/dgvm9lodv/image/upload/q_auto/f_auto/v1777741018/v2-1_j0k3z1.png" alt="إشعارك">
+        <h2 class="mt-6 text-center text-3xl font-extrabold flex flex-wrap items-center justify-center">
+            <span class="text-[#0b3fe4] ml-2 leading-none mt-1">•</span>
+            <span class="text-gradient">إنشاء حساب جديد 🚀</span>
+        </h2>
+        <p class="mt-2 text-center text-sm text-gray-600">
+            لديك حساب بالفعل؟
+            <a href="/login.html" class="font-medium text-primary-500 hover:text-primary-600 transition-colors">
+                تسجيل الدخول
+            </a>
+        </p>
+    </div>
+
+    <div class="mt-8 sm:mx-auto sm:w-full sm:max-w-xl mb-8">
+        <div class="bg-white rounded-2xl shadow-sm border border-gray-100 py-8 px-4 sm:px-10">
+            <form class="space-y-6" action="#" method="POST">
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div class="sm:col-span-2">
+                        <label for="full_name" class="block text-sm font-medium text-gray-700">الاسم رباعي</label>
+                        <div class="mt-2">
+                            <input id="full_name" name="full_name" type="text" autocomplete="name" required class="block w-full appearance-none rounded-full border border-gray-300 px-4 py-3 placeholder-gray-400 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm bg-white/50 backdrop-blur-sm transition-all" placeholder="أحمد محمد السيد علي">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="phone_number" class="block text-sm font-medium text-gray-700">رقم الهاتف</label>
+                        <div class="mt-2">
+                            <input id="phone_number" name="phone_number" type="tel" autocomplete="tel" required class="block w-full appearance-none rounded-full border border-gray-300 px-4 py-3 placeholder-gray-400 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm bg-white/50 backdrop-blur-sm transition-all text-left" dir="ltr" placeholder="0123456789">
+                        </div>
+                    </div>
+
+                    <div class="sm:col-span-2">
+                        <label for="company_name" class="block text-sm font-medium text-gray-700">اسم المؤسسة او المحل</label>
+                        <div class="mt-2">
+                            <input id="company_name" name="company_name" type="text" required class="block w-full appearance-none rounded-full border border-gray-300 px-4 py-3 placeholder-gray-400 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm bg-white/50 backdrop-blur-sm transition-all" placeholder="مؤسسة التقنية للتجارة">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="state" class="block text-sm font-medium text-gray-700">الولاية</label>
+                        <div class="mt-2">
+                            <select id="state" name="state" class="block w-full rounded-full border border-gray-300 px-4 py-3 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm bg-white/50 backdrop-blur-sm transition-all text-gray-700">
+                                <option>اختر الولاية</option>
+                                <option>الخرطوم</option>
+                                <option>الجزيرة</option>
+                                <option>نهر النيل</option>
+                                <option>الشمالية</option>
+                                <!-- add more options as needed -->
+                            </select>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="locality" class="block text-sm font-medium text-gray-700">المحلية</label>
+                        <div class="mt-2">
+                            <input id="locality" name="locality" type="text" required class="block w-full appearance-none rounded-full border border-gray-300 px-4 py-3 placeholder-gray-400 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm bg-white/50 backdrop-blur-sm transition-all" placeholder="محلية الخرطوم">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="password" class="block text-sm font-medium text-gray-700">كلمة المرور</label>
+                        <div class="mt-2 text-left" dir="ltr">
+                            <input id="password" name="password" type="password" autocomplete="new-password" required class="block w-full appearance-none rounded-full border border-gray-300 px-4 py-3 placeholder-gray-400 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm bg-white/50 backdrop-blur-sm transition-all" placeholder="••••••••">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="password_confirmation" class="block text-sm font-medium text-gray-700">اعادة كلمة المرور</label>
+                        <div class="mt-2 text-left" dir="ltr">
+                            <input id="password_confirmation" name="password_confirmation" type="password" autocomplete="new-password" required class="block w-full appearance-none rounded-full border border-gray-300 px-4 py-3 placeholder-gray-400 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-primary-500 sm:text-sm bg-white/50 backdrop-blur-sm transition-all" placeholder="••••••••">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="pt-2">
+                    <button type="submit" class="flex w-full justify-center rounded-full border border-transparent bg-primary-500 py-3.5 px-4 text-sm font-semibold text-white shadow-sm hover:bg-primary-600 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2 transition-all hover:-translate-y-0.5">
+                        تسجيل الحساب
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div data-include="/components/footer.html"></div>
+</body>
+</html>

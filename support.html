@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إشعارك | الدعم والمساعدة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alexandria:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script type="module" src="/assets/js/main.js"></script>
+</head>
+<body class="font-alexandria bg-gray-50 text-gray-900 relative antialiased min-h-screen flex flex-col overflow-x-hidden">
+    <!-- Blurred Blobs Background -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        
+        
+    </div>
+
+    <!-- Navbar -->
+    <div data-include="/components/navbar.html"></div>
+
+    <main class="flex-grow pt-32 pb-16">
+        <div class="container mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h1 class="text-3xl sm:text-4xl font-extrabold flex flex-wrap items-center justify-center mb-4">
+                    <span class="text-[#0b3fe4] ml-2 leading-none mt-1">•</span>
+                    <span class="text-gradient">كيف يمكننا مساعدتك؟</span>
+                </h1>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">نحن هنا للإجابة على استفساراتك وحل أي مشكلة قد تواجهك.</p>
+            </div>
+
+            <!-- Contact Options -->
+            <div class="grid sm:grid-cols-2 gap-8 mb-16">
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">راسلنا عبر البريد</h3>
+                    <p class="text-gray-600 mb-4">الدعم الفني متاح على مدار الساعة وسيتم الرد عليك في أقرب وقت.</p>
+                    <a href="mailto:support@esh3ark.com" class="text-primary-600 font-bold hover:underline" dir="ltr">support@esh3ark.com</a>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 flex flex-col items-center text-center hover:-translate-y-1 hover:shadow-md transition-all duration-300">
+                    <div class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mb-4">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-phone"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">اتصل بنا</h3>
+                    <p class="text-gray-600 mb-4">يمكنك التواصل مع خدمة العملاء يومياً من 8 صباحاً حتى 8 مساءً.</p>
+                    <a href="tel:+249123456789" class="text-primary-600 font-bold hover:underline" dir="ltr">+249 123 456 789</a>
+                </div>
+            </div>
+
+            <!-- FAQ Section -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold text-gray-900 mb-6 border-b border-gray-200 pb-4">الأسئلة الشائعة</h2>
+                <div class="space-y-4" x-data="{ activeAccordion: 1 }">
+                    <!-- FAQ 1 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                        <button @click="activeAccordion = (activeAccordion === 1 ? null : 1)" class="w-full px-6 py-4 flex items-center justify-between focus:outline-none">
+                            <span class="font-bold text-gray-900 font-alexandria">كيف يمكنني تفعيل حسابي الجديد؟</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200" :class="{'rotate-180': activeAccordion === 1}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div x-show="activeAccordion === 1" x-collapse class="px-6 pb-4">
+                            <p class="text-gray-600">بمجرد إنشاء الحساب، سيصلك رمز تفعيل على رقم هاتفك المسجل. قم بإدخال الرمز في النظام لإكمال عملية التفعيل بنجاح.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- FAQ 2 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                        <button @click="activeAccordion = (activeAccordion === 2 ? null : 2)" class="w-full px-6 py-4 flex items-center justify-between focus:outline-none">
+                            <span class="font-bold text-gray-900 font-alexandria">ما هي البنوك المدعومة في النظام حالياً؟</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200" :class="{'rotate-180': activeAccordion === 2}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div x-show="activeAccordion === 2" style="display: none;" x-collapse class="px-6 pb-4">
+                            <p class="text-gray-600">حالياً ندعم بنك الخرطوم (تطبيق بنكك)، تطبيق فوري، وتطبيق أوكاش، وجاري العمل على إضافة المزيد من البنوك قريباً.</p>
+                        </div>
+                    </div>
+
+                    <!-- FAQ 3 -->
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+                        <button @click="activeAccordion = (activeAccordion === 3 ? null : 3)" class="w-full px-6 py-4 flex items-center justify-between focus:outline-none">
+                            <span class="font-bold text-gray-900 font-alexandria">كيف أستعيد كلمة المرور الخاصة بي؟</span>
+                            <svg class="w-5 h-5 text-gray-500 transform transition-transform duration-200" :class="{'rotate-180': activeAccordion === 3}" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </button>
+                        <div x-show="activeAccordion === 3" style="display: none;" x-collapse class="px-6 pb-4">
+                            <p class="text-gray-600">يمكنك الذهاب إلى صفحة تسجيل الدخول والنقر على "نسيت كلمة المرور"، ثم أدخل رقم هاتفك لتصلك رسالة تحتوي على رمز إعادة تعيين كلمة المرور.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 bg-white/50 backdrop-blur-md rounded-3xl p-8 border border-white/60 shadow-sm">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">لم تجد إجابة لسؤالك؟</h3>
+                <p class="text-gray-600 mb-6">حمل تطبيقنا الآن وابدأ محادثة مباشرة مع فريق الدعم الفني.</p>
+                <div class="flex justify-center">
+                    <a href="javascript:void(0)" class="inline-flex items-center gap-x-3 rounded-full bg-black px-6 py-3 text-white hover:bg-gray-800 transition-colors shadow-sm focus:outline-none focus:ring-2 focus:ring-gray-800 focus:ring-offset-2">
+                        <span class="text-sm font-bold">حمل التطبيق من Google Play</span>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <div data-include="/components/footer.html"></div>
+
+</body>
+</html>
